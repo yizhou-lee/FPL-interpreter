@@ -1,0 +1,31 @@
+expr : int
+     | var
+     | "(" expr ")"
+     | expr "+" expr -> add
+     | expr "-" expr -> sub
+     | expr "*" expr -> mul
+     | expr "/" expr -> div
+
+int : SIGNED_INT
+
+var : /[a-z]+/
+
+pred : expr "=" expr -> eq
+     | expr ">" expr -> gt
+     | expr "<" expr -> lt
+
+l : "SKIP" -> skip
+  | "DEFINE" var -> define
+  | var ":=" expr -> assign
+  | "PRINT" expr -> print
+  | "REPEAT" int "TIMES" p "ENDREPEAT" -> repeat
+  | "IF" pred "THEN" p "ELSE" p "ENDIF" -> if
+
+p : l
+  | l p
+
+
+%ignore (" " | "\n" | /\t/ )+
+
+%import common.SIGNED_INT
+%import common.STRING

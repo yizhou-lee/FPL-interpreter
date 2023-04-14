@@ -1,0 +1,15 @@
+DEFINE x
+base := 2
+log := 0
+IF x > 0 THEN
+    REPEAT 20 TIMES
+       IF x = 1 THEN SKIP ELSE
+           log := (log + 1)
+           x := (x/base)
+       ENDIF
+    ENDREPEAT
+ELSE
+log := -1
+ENDIF
+PRINT log
+
