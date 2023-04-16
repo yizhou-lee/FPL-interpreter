@@ -1,0 +1,12 @@
+DEFINE x
+base := 2
+log := 0
+IF x > 0 THEN
+  WHILE x > 1 DO
+log := log + 1
+    x := x/base
+  ENDWHILE
+ELSE
+log := -1
+ENDIF
+PRINT log

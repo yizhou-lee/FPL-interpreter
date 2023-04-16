@@ -1,0 +1,5 @@
+DEFINE x
+WHILE x > 0 DO
+    x := x-1
+ENDWHILE
+PRINT 10/x

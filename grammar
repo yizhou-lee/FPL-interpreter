@@ -20,6 +20,7 @@ l : "SKIP" -> skip
   | "PRINT" expr -> print
   | "REPEAT" int "TIMES" p "ENDREPEAT" -> repeat
   | "IF" pred "THEN" p "ELSE" p "ENDIF" -> if
+  | "WHILE" pred "DO" p "ENDWHILE" -> while
 
 p : l
   | l p

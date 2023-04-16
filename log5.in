@@ -1,0 +1,5 @@
+DEFINE x
+REPEAT 5 TIMES
+    y := x/(w+1)
+ENDREPEAT
+PRINT x

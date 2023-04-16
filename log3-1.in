@@ -1,0 +1,5 @@
+DEFINE x
+REPEAT 5 TIMES
+    x := x-1
+ENDREPEAT
+PRINT 10/x

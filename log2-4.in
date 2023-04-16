@@ -1,0 +1,7 @@
+DEFINE x
+y := 6
+z := 7
+IF x > 0 THEN SKIP ELSE
+    x := x/y
+ENDIF
+PRINT x+y*z-w

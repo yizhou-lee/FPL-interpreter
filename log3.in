@@ -1,0 +1,10 @@
+DEFINE x
+IF x = 0 THEN 
+    REPEAT 5 TIMES
+        x := x*0
+    ENDREPEAT
+    PRINT 10/x
+ELSE
+    SKIP
+ENDIF
+PRINT y/x
